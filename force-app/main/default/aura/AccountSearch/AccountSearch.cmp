@@ -1,0 +1,16 @@
+<aura:component controller="AccountSearchController" implements="lightning:availableForFlowScreens">
+    <aura:registerEvent name="SearchEvent" type="c:SearchEvent"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:attribute name="searchTerm" type="String" default="search keyword"/>
+    <aura:attribute name="searchTimeoutId" type="Id" />
+    <lightning:card title="Account Search" iconName="standard:search">
+        <div class="slds-form slds-p-around_x-small">
+            <lightning:input
+                label="Search"
+                variant="label-hidden"
+                value="{!v.searchTerm}"
+                placeholder="Search by name, phone, website, or billing address"
+                onchange="{!c.onSearchTermChange}"/>
+        </div>
+    </lightning:card>
+</aura:component>

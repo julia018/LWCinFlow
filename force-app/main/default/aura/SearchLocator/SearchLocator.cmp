@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:availableForFlowScreens">
+    <aura:attribute name="chosenAccountId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <lightning:layout horizontalAlign="space" multipleRows="true">
+        <lightning:layoutItem size="12"
+                              mediumDeviceSize="12"
+                              padding="around-small">
+            <c:AccountSearch />
+            <lightning:button label="Clear selection" 
+               variant="brand" onclick="{!c.clearAccountSelection}" />
+        </lightning:layoutItem>
+        <lightning:layoutItem size="12"
+                              mediumDeviceSize="12"
+                              padding="around-small">
+            <c:AccountList availableActions="{!v.availableActions}" AccountChosenEvent="{!c.handleAccountChosen}"/>
+        </lightning:layoutItem>
+        <c:flowScreenFooter aura:id="footer" availableActions="{!v.availableActions}" navigateEvent="{!c.handleNavigate}" />
+    </lightning:layout>    
+</aura:component>	

@@ -1,0 +1,3 @@
+<design:component >
+    <design:attribute name="chosenAccountId" Label="Chosen Account"/>
+</design:component>
