@@ -10,7 +10,7 @@
         var searchTerm = component.get( "v.searchTerm" );
         // to improve performance, particularly for fast typers,
         // we wait a small delay to check when user is done typing
-        var delayMillis = 500;
+        var delayMillis = 300;
         // get timeout id of pending search action
         var timeoutId = component.get( "v.searchTimeoutId" );
         // cancel pending search action and reset timer

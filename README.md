@@ -1,1 +1,1 @@
-# LWC for lightning flow
+# Aura components for using in flow
